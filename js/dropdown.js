@@ -120,6 +120,11 @@
           }
         }
 
+        // When placed inside modal - calculate new windowHeight based on modal content height
+        var modalContent = wrapper.parents('.modal-content');
+        if (modalContent.size() > 0) {
+          windowHeight = modalContent.height();
+        }
 
         if (offsetLeft + activates.innerWidth() > $(window).width()) {
           // Dropdown goes past screen on right, force right alignment
